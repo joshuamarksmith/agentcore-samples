@@ -17,4 +17,17 @@ An AI agent built with **Strands Agents** and **AgentCoreBrowser** autonomously 
 
 ---
 
+### [Pay for Data (Heurist)](pay-for-data/)
+
+A finance research agent that calls paid **Heurist x402 endpoints** for live market prices, SEC filings, and macro indicators, analyzes the data with **AgentCore Code Interpreter**, and returns charts and reports as S3 presigned URLs. The `AgentCorePaymentsPlugin` handles the entire x402 payment lifecycle — tool code stays a plain `http_request` call.
+
+**Highlights**
+- HTTP 402 interception and automatic payment retry via AgentCorePaymentsPlugin
+- Parallel paid tool calls with USDC settlement on Base mainnet
+- AgentCore Code Interpreter for pandas/matplotlib analysis and S3 artifact export
+- Deployed to AgentCore Runtime with full OTel observability (CloudWatch GenAI)
+- Tested end-to-end on Base mainnet with real USDC
+
+---
+
 More use cases coming soon.
